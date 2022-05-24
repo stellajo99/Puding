@@ -32,4 +32,3 @@ If there is an arrow at the top right of the screen, the user can go to the prev
 In the shop, the user can use scrolling to see more items.
 
 Most of the alarm setting steps are hard coded.
-![image](https://user-images.githubusercontent.com/71169201/170084660-8aea8c8f-21cd-4c7d-9d17-86678e27d098.png)
