@@ -1,9 +1,6 @@
 2022-1 Human-Computer Interaction
-Team4 Phoenix
-Minkyoung An
-Seoyoung Jo
-Juyie Hwang
-Yuna Kim
+
+Team4 Phoenix: Minkyoung An, Seoyoung Jo, Juyie Hwang, Yuna Kim
 
 ReadMe
 
