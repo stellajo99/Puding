@@ -4,17 +4,21 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home_black_24dp"
-        android:title="Work"
-        android:color="@color/bg_color"/>
+        android:title="Home"/>
 
     <item
         android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="Shop" />
+        android:icon="@drawable/work"
+        android:title="Work" />
 
     <item
         android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="Profile" />
+        android:icon="@drawable/shop"
+        android:title="Shop" />
+
+    <item
+        android:id="@+id/navigation_user"
+        android:icon="@drawable/user"
+        android:title="User" />
 
 </menu>
