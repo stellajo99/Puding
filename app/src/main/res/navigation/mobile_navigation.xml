@@ -8,20 +8,20 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.Phoenix.puding.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:label="Home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.Phoenix.puding.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_work"
+        android:name="com.Phoenix.puding.ui.work.WorkFragment"
+        android:label="Work"
+        tools:layout="@layout/fragment_work" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.Phoenix.puding.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_shop"
+        android:name="com.Phoenix.puding.ui.shop.ShopFragment"
+        android:label="Shop"
+        tools:layout="@layout/fragment_shop" />
 
     <fragment
         android:id="@+id/navigation_user"
