@@ -1,13 +1,13 @@
-package com.Phoenix.puding.ui.notifications
+package com.Phoenix.puding.ui.work
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class WorkViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is shop Fragment"
+        value = "This is work Fragment"
     }
     val text: LiveData<String> = _text
 }
