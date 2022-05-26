@@ -110,4 +110,14 @@
         app:layout_constraintTop_toTopOf="@+id/nav_host_fragment_activity_main"
         android:src="@drawable/puppy_container" />
 
+    <TextView
+        android:id="@+id/time_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/pet_container"
+        app:layout_constraintEnd_toEndOf="@+id/pet_container"
+        app:layout_constraintStart_toStartOf="@+id/pet_container"
+        app:layout_constraintTop_toTopOf="@+id/pet_container" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
