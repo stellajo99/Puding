@@ -6,12 +6,6 @@
     app:startDestination="@+id/navigation_home">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.Phoenix.puding.ui.home.HomeFragment"
-        android:label="Home"
-        tools:layout="@layout/fragment_home" />
-
-    <fragment
         android:id="@+id/navigation_work"
         android:name="com.Phoenix.puding.ui.work.WorkFragment"
         android:label="Work"
@@ -28,4 +22,10 @@
         android:name="com.Phoenix.puding.ui.user.UserFragment"
         android:label="User"
         tools:layout="@layout/fragment_user" />
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.Phoenix.puding.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
 </navigation>

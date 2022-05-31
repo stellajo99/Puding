@@ -6,6 +6,7 @@ import android.graphics.BlendModeColorFilter
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -105,5 +106,43 @@ class MainActivity : AppCompatActivity() {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.nav_host_fragment_activity_main,fragment).commit()
+    }
+
+    fun openPuppyContainer(){
+        var puppyContainer = findViewById<ImageView>(R.id.pet_container)
+        var puppy = findViewById<ImageView>(R.id.puppy)
+
+        puppyContainer.visibility = View.VISIBLE
+        puppy.visibility = View.VISIBLE
+    }
+
+    fun closePuppyContainer(){
+        var puppyContainer = findViewById<ImageView>(R.id.pet_container)
+        var puppy = findViewById<ImageView>(R.id.puppy)
+
+        puppyContainer.visibility = View.INVISIBLE
+        puppy.visibility = View.INVISIBLE
+    }
+
+    fun getCoin(): Int{
+        var coin = findViewById<TextView>(R.id.coin)
+
+        return Integer.parseInt(coin.text.toString())
+    }
+
+    fun useCoin(value: Int){
+        var coin = findViewById<TextView>(R.id.coin)
+        var currentValue = Integer.parseInt(coin.text.toString())
+        currentValue -= value
+
+        coin.text = currentValue.toString()
+    }
+
+    fun incHunger(value: Int){
+        findViewById<ProgressBar>(R.id.hungerBar).progress += value
+    }
+
+    fun incFun(value: Int){
+        findViewById<ProgressBar>(R.id.funBar).progress += value
     }
 }

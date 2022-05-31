@@ -108,6 +108,7 @@
         android:id="@+id/pet_container"
         android:layout_width="296dp"
         android:layout_height="276dp"
+        android:translationZ="0dp"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -189,6 +190,7 @@
         android:id="@+id/puppy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:translationZ="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/pet_container"
         app:layout_constraintEnd_toEndOf="@+id/pet_container"
         app:layout_constraintStart_toStartOf="@+id/pet_container"
@@ -234,17 +236,5 @@
         app:layout_constraintHorizontal_bias="0.35"
         app:layout_constraintStart_toEndOf="@+id/check"
         app:layout_constraintTop_toTopOf="@+id/problem_container" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/coin_container"
-        app:layout_constraintEnd_toEndOf="@+id/coin_container"
-        app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toStartOf="@+id/coin_container"
-        app:layout_constraintTop_toTopOf="@+id/coin_container"
-        app:layout_constraintVertical_bias="0.44"
-        app:srcCompat="@drawable/dollar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

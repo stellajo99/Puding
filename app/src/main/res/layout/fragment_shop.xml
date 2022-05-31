@@ -134,7 +134,7 @@
                     android:layout_marginVertical="10dp"/>
 
                 <ImageView
-                    android:id="@+id/toy"
+                    android:id="@+id/toy2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:src="@drawable/toy2"
@@ -179,6 +179,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/transparent"
         android:visibility="invisible"
+        android:background="@color/transparent"
         app:layout_constraintBottom_toBottomOf="@+id/food_tab"
         app:layout_constraintEnd_toEndOf="@+id/food_tab"
         app:layout_constraintHorizontal_bias="0.315"
@@ -192,6 +193,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/transparent"
         android:visibility="visible"
+        android:background="@color/transparent"
         app:layout_constraintBottom_toBottomOf="@+id/food_tab"
         app:layout_constraintEnd_toEndOf="@+id/food_tab"
         app:layout_constraintHorizontal_bias="0.68"
@@ -204,10 +206,101 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/transparent"
+        android:background="@color/transparent"
         app:layout_constraintBottom_toBottomOf="@+id/food_tab"
         app:layout_constraintEnd_toEndOf="@+id/food_tab"
         app:layout_constraintHorizontal_bias="0.98"
         app:layout_constraintStart_toStartOf="@+id/food_tab"
         app:layout_constraintTop_toTopOf="@+id/shop_popup"
         app:layout_constraintVertical_bias="0.351" />
+
+    <ImageView
+        android:id="@+id/inventory_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/food_inventory_popup"
+        android:translationZ="90dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/popup_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/raw_food1"
+        android:visibility="invisible"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/shop_popup"
+        app:layout_constraintEnd_toEndOf="@+id/inventory_popup"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="@+id/inventory_popup"
+        app:layout_constraintTop_toTopOf="@+id/inventory_popup"
+        app:layout_constraintVertical_bias="0.316" />
+
+    <TextView
+        android:id="@+id/popup_coin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        android:textSize="18dp"
+        android:visibility="invisible"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/inventory_popup"
+        app:layout_constraintEnd_toEndOf="@+id/inventory_popup"
+        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintStart_toStartOf="@+id/inventory_popup"
+        app:layout_constraintTop_toTopOf="@+id/inventory_popup"
+        app:layout_constraintVertical_bias="0.62" />
+
+    <TextView
+        android:id="@+id/popup_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        android:textSize="18dp"
+        android:visibility="invisible"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/inventory_popup"
+        app:layout_constraintEnd_toEndOf="@+id/inventory_popup"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toStartOf="@+id/inventory_popup"
+        app:layout_constraintTop_toTopOf="@+id/inventory_popup"
+        app:layout_constraintVertical_bias="0.62" />
+
+    <Button
+        android:id="@+id/inventory_popup_cancle"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        android:background="@color/transparent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/inventory_popup"
+        app:layout_constraintEnd_toEndOf="@+id/inventory_popup"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="@+id/inventory_popup"
+        app:layout_constraintTop_toTopOf="@+id/inventory_popup"
+        app:layout_constraintVertical_bias="0.97" />
+
+    <Button
+        android:id="@+id/inventory_popup_buy"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        android:background="@color/transparent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/inventory_popup"
+        app:layout_constraintEnd_toEndOf="@+id/inventory_popup"
+        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintStart_toStartOf="@+id/inventory_popup"
+        app:layout_constraintTop_toTopOf="@+id/inventory_popup"
+        app:layout_constraintVertical_bias="0.97" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
