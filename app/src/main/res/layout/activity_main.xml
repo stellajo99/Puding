@@ -235,4 +235,16 @@
         app:layout_constraintStart_toEndOf="@+id/check"
         app:layout_constraintTop_toTopOf="@+id/problem_container" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/coin_container"
+        app:layout_constraintEnd_toEndOf="@+id/coin_container"
+        app:layout_constraintHorizontal_bias="0.159"
+        app:layout_constraintStart_toStartOf="@+id/coin_container"
+        app:layout_constraintTop_toTopOf="@+id/coin_container"
+        app:layout_constraintVertical_bias="0.44"
+        app:srcCompat="@drawable/dollar" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

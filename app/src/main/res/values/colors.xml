@@ -13,4 +13,5 @@
     <color name="bar_danger">#FFFF5B51</color>
     <color name="bar_soso">#FFFFD850</color>
     <color name="bar_good">#FF4DCA68</color>
+    <color name="transparent">#00000000</color>
 </resources>

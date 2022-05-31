@@ -10,9 +10,11 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
+import androidx.viewpager.widget.ViewPager
 import com.Phoenix.puding.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.util.*
@@ -97,5 +99,11 @@ class MainActivity : AppCompatActivity() {
         else{
             puppy.setImageResource(R.drawable.soso_puppy)
         }
+    }
+
+    fun replaceFragment(fragment: Fragment){
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.nav_host_fragment_activity_main,fragment).commit()
     }
 }

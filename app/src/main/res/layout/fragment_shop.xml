@@ -7,18 +7,207 @@
     android:background="@color/bg_color"
     tools:context=".ui.shop.ShopFragment">
 
-    <TextView
-        android:id="@+id/text_shop"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/shop_popup"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:src="@drawable/popup"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8"/>
+        app:layout_constraintVertical_bias="0.916" />
+
+    <ImageView
+        android:id="@+id/food_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/food_tab"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/shop_popup"
+        app:layout_constraintEnd_toEndOf="@+id/shop_popup"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/shop_popup"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.779" />
+
+    <ImageView
+        android:id="@+id/toy_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/toy_tab"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/shop_popup"
+        app:layout_constraintEnd_toEndOf="@+id/shop_popup"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/shop_popup"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.779" />
+
+    <ScrollView
+        android:id="@+id/food_inventory"
+        android:layout_width="340dp"
+        android:layout_height="130dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/shop_popup"
+        app:layout_constraintEnd_toEndOf="@+id/shop_popup"
+        app:layout_constraintStart_toStartOf="@+id/shop_popup"
+        app:layout_constraintTop_toTopOf="@+id/shop_popup"
+        app:layout_constraintVertical_bias="0.8">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow>
+                <ImageView
+                    android:id="@+id/food1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/food1"
+                    android:layout_marginVertical="10dp"/>
+
+                <ImageView
+                    android:id="@+id/food2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/food2"
+                    android:layout_marginVertical="10dp"/>
+
+                <ImageView
+                    android:id="@+id/food3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/food3"
+                    android:layout_marginVertical="10dp"/>
+            </TableRow>
+
+            <TableRow>
+                <ImageView
+                    android:id="@+id/food4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/food4"
+                    android:layout_marginVertical="10dp"/>
+
+                <ImageView
+                    android:id="@+id/food5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/food5"
+                    android:layout_marginVertical="10dp"/>
+
+                <ImageView
+                    android:id="@+id/food6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/food6"
+                    android:layout_marginVertical="10dp"/>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/toy_inventory"
+        android:layout_width="340dp"
+        android:layout_height="130dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/shop_popup"
+        app:layout_constraintEnd_toEndOf="@+id/shop_popup"
+        app:layout_constraintStart_toStartOf="@+id/shop_popup"
+        app:layout_constraintTop_toTopOf="@+id/shop_popup"
+        app:layout_constraintVertical_bias="0.8">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow>
+                <ImageView
+                    android:id="@+id/toy1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/toy1"
+                    android:layout_marginVertical="10dp"/>
+
+                <ImageView
+                    android:id="@+id/toy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/toy2"
+                    android:layout_marginVertical="10dp"/>
+
+                <ImageView
+                    android:id="@+id/toy3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/toy3"
+                    android:layout_marginVertical="10dp"/>
+            </TableRow>
+
+            <TableRow>
+                <ImageView
+                    android:id="@+id/toy4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/toy4"
+                    android:layout_marginVertical="10dp"/>
+
+                <ImageView
+                    android:id="@+id/toy5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/toy5"
+                    android:layout_marginVertical="10dp"/>
+
+                <ImageView
+                    android:id="@+id/toy6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/toy6"
+                    android:layout_marginVertical="10dp"/>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/food_tab_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/food_tab"
+        app:layout_constraintEnd_toEndOf="@+id/food_tab"
+        app:layout_constraintHorizontal_bias="0.315"
+        app:layout_constraintStart_toStartOf="@+id/food_tab"
+        app:layout_constraintTop_toTopOf="@+id/shop_popup"
+        app:layout_constraintVertical_bias="0.351" />
+
+    <Button
+        android:id="@+id/toy_tab_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/food_tab"
+        app:layout_constraintEnd_toEndOf="@+id/food_tab"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toStartOf="@+id/food_tab"
+        app:layout_constraintTop_toTopOf="@+id/shop_popup"
+        app:layout_constraintVertical_bias="0.351" />
+
+    <Button
+        android:id="@+id/close_tab_button"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/food_tab"
+        app:layout_constraintEnd_toEndOf="@+id/food_tab"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="@+id/food_tab"
+        app:layout_constraintTop_toTopOf="@+id/shop_popup"
+        app:layout_constraintVertical_bias="0.351" />
 </androidx.constraintlayout.widget.ConstraintLayout>
