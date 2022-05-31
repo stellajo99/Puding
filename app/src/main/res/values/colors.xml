@@ -10,7 +10,7 @@
     <color name="bg_color">#FFEBE7E4</color>
     <color name="main_ui_color">#FF232323</color>
     <color name="ui_purple">#FFBFBDF4</color>
-    <color name="bar_danger">#FFEB5353</color>
-    <color name="bar_soso">#FFF9D923</color>
-    <color name="bar_good">#FF36AE7C</color>
+    <color name="bar_danger">#FFFF5B51</color>
+    <color name="bar_soso">#FFFFD850</color>
+    <color name="bar_good">#FF4DCA68</color>
 </resources>
