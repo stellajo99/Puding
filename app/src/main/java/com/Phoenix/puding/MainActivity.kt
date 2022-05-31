@@ -6,6 +6,7 @@ import android.graphics.BlendModeColorFilter
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -19,9 +20,9 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    lateinit var timeTest: TextView
     lateinit var hungryBar: ProgressBar
     lateinit var  funBar: ProgressBar
+    lateinit var puppy: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,16 +40,16 @@ class MainActivity : AppCompatActivity() {
 
         navView.setupWithNavController(navController)
 
-        timeTest = findViewById(R.id.time_test)
-        timeTest.text = "start"
-
         //bind view
         hungryBar = findViewById(R.id.hungerBar)
         funBar = findViewById(R.id.funBar)
+        puppy = findViewById(R.id.puppy)
 
         val timerTask: TimerTask = object : TimerTask() {
             override fun run() {
-                decreaseBar()
+                runOnUiThread() {
+                    decreaseBar()
+                }
             }
         }
 
@@ -82,6 +83,19 @@ class MainActivity : AppCompatActivity() {
         }
         else{
             funBar.progressTintList = ColorStateList.valueOf(resources.getColor(R.color.bar_danger))
+        }
+        checkPuppy()
+    }
+
+    fun checkPuppy(){
+        if(hungryBar.progress >= 70 && funBar.progress >= 70){
+            puppy.setImageResource(R.drawable.happy_puppy)
+        }
+        else if(hungryBar.progress < 35 || funBar.progress < 35){
+            puppy.setImageResource(R.drawable.bad_puppy)
+        }
+        else{
+            puppy.setImageResource(R.drawable.soso_puppy)
         }
     }
 }
