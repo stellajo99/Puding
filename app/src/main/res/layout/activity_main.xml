@@ -185,4 +185,54 @@
         app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/coin_icon" />
 
+    <ImageView
+        android:id="@+id/puppy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/pet_container"
+        app:layout_constraintEnd_toEndOf="@+id/pet_container"
+        app:layout_constraintStart_toStartOf="@+id/pet_container"
+        app:layout_constraintTop_toTopOf="@+id/pet_container"
+        app:layout_constraintVertical_bias="0.811"
+        app:srcCompat="@drawable/happy_puppy" />
+
+    <TextView
+        android:id="@+id/coin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/main_ui_color"
+        android:text="100"
+        app:layout_constraintBottom_toBottomOf="@+id/coin_icon"
+        app:layout_constraintEnd_toEndOf="@+id/coin_container"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toEndOf="@+id/coin_icon"
+        app:layout_constraintTop_toTopOf="@+id/coin_icon"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/main_problem_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/bg_color"
+        android:text="#2559"
+        app:layout_constraintBottom_toBottomOf="@+id/problem_num_container"
+        app:layout_constraintEnd_toEndOf="@+id/problem_num_container"
+        app:layout_constraintStart_toStartOf="@+id/problem_num_container"
+        app:layout_constraintTop_toTopOf="@+id/problem_num_container" />
+
+    <TextView
+        android:id="@+id/main_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="05 : 00 PM"
+        android:textColor="@color/main_ui_color"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/problem_container"
+        app:layout_constraintEnd_toStartOf="@+id/problem_num_container"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toEndOf="@+id/check"
+        app:layout_constraintTop_toTopOf="@+id/problem_container" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
