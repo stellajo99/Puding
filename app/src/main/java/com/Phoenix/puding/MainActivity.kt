@@ -1,18 +1,27 @@
 package com.Phoenix.puding
 
+import android.content.res.ColorStateList
+import android.graphics.BlendMode
+import android.graphics.BlendModeColorFilter
+import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.widget.ProgressBar
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.Phoenix.puding.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    lateinit var timeTest: TextView
+    lateinit var hungryBar: ProgressBar
+    lateinit var  funBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,5 +38,50 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_home, R.id.navigation_work, R.id.navigation_shop, R.id.navigation_user))
 
         navView.setupWithNavController(navController)
+
+        timeTest = findViewById(R.id.time_test)
+        timeTest.text = "start"
+
+        //bind view
+        hungryBar = findViewById(R.id.hungerBar)
+        funBar = findViewById(R.id.funBar)
+
+        val timerTask: TimerTask = object : TimerTask() {
+            override fun run() {
+                decreaseBar()
+            }
+        }
+
+        var timer: Timer = Timer()
+        timer.schedule(timerTask, 0, 1000)
+    }
+
+    fun decreaseBar() {
+        hungryBar.incrementProgressBy(-2)
+        funBar.incrementProgressBy(-1)
+        if (hungryBar.progress < 0)
+            hungryBar.progress = 0
+        if (funBar.progress < 0)
+            funBar.progress = 0
+
+        if(hungryBar.progress >= 70) {
+            hungryBar.progressTintList = ColorStateList.valueOf(resources.getColor(R.color.bar_good))
+        }
+        else if(hungryBar.progress > 35){
+            hungryBar.progressTintList = ColorStateList.valueOf(resources.getColor(R.color.bar_soso))
+        }
+        else{
+            hungryBar.progressTintList = ColorStateList.valueOf(resources.getColor(R.color.bar_danger))
+        }
+
+        if(funBar.progress >= 70) {
+            funBar.progressTintList = ColorStateList.valueOf(resources.getColor(R.color.bar_good))
+        }
+        else if(funBar.progress > 35){
+            funBar.progressTintList = ColorStateList.valueOf(resources.getColor(R.color.bar_soso))
+        }
+        else{
+            funBar.progressTintList = ColorStateList.valueOf(resources.getColor(R.color.bar_danger))
+        }
     }
 }
