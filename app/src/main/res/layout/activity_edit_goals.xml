@@ -13,16 +13,16 @@
         android:background="@color/main_ui_color"
         app:itemIconTint="@drawable/menu_selector_color"
         app:itemTextColor="@drawable/menu_selector_color"
-        app:layout_constraintBottom_toBottomOf="@+id/set_goals"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_goals"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/set_goals"
+        app:layout_constraintTop_toTopOf="@+id/edit_goals"
         app:layout_constraintVertical_bias="1.0"
         app:menu="@menu/bottom_nav_menu" />
 
     <fragment
-        android:id="@+id/set_goals"
+        android:id="@+id/edit_goals"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -38,10 +38,10 @@
         android:onClick="backbtn"
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
-        app:layout_constraintEnd_toEndOf="@+id/set_goals"
+        app:layout_constraintEnd_toEndOf="@+id/edit_goals"
         app:layout_constraintHorizontal_bias="0.097"
-        app:layout_constraintStart_toStartOf="@+id/set_goals"
-        app:layout_constraintTop_toTopOf="@+id/set_goals"
+        app:layout_constraintStart_toStartOf="@+id/edit_goals"
+        app:layout_constraintTop_toTopOf="@+id/edit_goals"
         app:layout_constraintVertical_bias="0.112"
         app:srcCompat="@drawable/arrow_left" />
 
@@ -55,8 +55,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/set_goals"
-        app:layout_constraintTop_toTopOf="@+id/set_goals"
+        app:layout_constraintStart_toStartOf="@+id/edit_goals"
+        app:layout_constraintTop_toTopOf="@+id/edit_goals"
         app:layout_constraintVertical_bias="0.183" />
 
 
@@ -66,23 +66,47 @@
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
-        app:layout_constraintEnd_toEndOf="@+id/set_goals"
-        app:layout_constraintStart_toStartOf="@+id/set_goals"
-        app:layout_constraintTop_toTopOf="@+id/set_goals"
-        app:layout_constraintVertical_bias="0.318"
+        app:layout_constraintEnd_toEndOf="@+id/edit_goals"
+        app:layout_constraintStart_toStartOf="@+id/edit_goals"
+        app:layout_constraintTop_toTopOf="@+id/edit_goals"
+        app:layout_constraintVertical_bias="0.33"
         app:srcCompat="@drawable/top_container" />
 
-    <TextView
-        android:id="@+id/datetext"
+    <Spinner
+        android:id="@+id/hour_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="10 : 00"
-        android:textColor="@color/main_ui_color"
-        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/top_container"
+        app:layout_constraintEnd_toEndOf="@+id/top_container"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="@+id/top_container"
+        app:layout_constraintTop_toTopOf="@+id/top_container"
+        app:layout_constraintVertical_bias="0.5" />
 
+    <TextView
+        android:id="@+id/divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=":"
+        android:textColor="@color/main_ui_color"
+        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/top_container"
         app:layout_constraintEnd_toEndOf="@+id/top_container"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/top_container"
+        app:layout_constraintTop_toTopOf="@+id/top_container"
+        app:layout_constraintVertical_bias="0.5" />
+
+
+
+    <Spinner
+        android:id="@+id/minute_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/top_container"
+        app:layout_constraintEnd_toEndOf="@+id/top_container"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="@+id/top_container"
         app:layout_constraintTop_toTopOf="@+id/top_container"
         app:layout_constraintVertical_bias="0.5" />
@@ -92,9 +116,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
-        app:layout_constraintEnd_toEndOf="@+id/set_goals"
-        app:layout_constraintStart_toStartOf="@+id/set_goals"
-        app:layout_constraintTop_toTopOf="@+id/set_goals"
+        app:layout_constraintEnd_toEndOf="@+id/edit_goals"
+        app:layout_constraintStart_toStartOf="@+id/edit_goals"
+        app:layout_constraintTop_toTopOf="@+id/edit_goals"
         app:layout_constraintVertical_bias="0.513"
         app:srcCompat="@drawable/middle_container" />
 
@@ -113,42 +137,26 @@
         app:layout_constraintTop_toTopOf="@+id/middle_repeat"
         app:layout_constraintVertical_bias="0.5" />
 
-    <TextView
-        android:id="@+id/repeat_select"
+    <Spinner
+        android:id="@+id/repeat_choice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Never"
-        android:textColor="@color/main_ui_color"
-        android:textSize="20sp"
-
-        app:layout_constraintBottom_toBottomOf="@+id/middle_repeat"
-        app:layout_constraintEnd_toEndOf="@+id/middle_repeat"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="@+id/middle_repeat"
-        app:layout_constraintTop_toTopOf="@+id/middle_repeat"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <ImageButton
-        android:id="@+id/repeat_arrow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="@+id/middle_repeat"
         app:layout_constraintEnd_toEndOf="@+id/middle_repeat"
         app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="@+id/middle_repeat"
         app:layout_constraintTop_toTopOf="@+id/middle_repeat"
-        app:layout_constraintVertical_bias="0.45"
-        app:srcCompat="@drawable/arrow_right" />
+        app:layout_constraintVertical_bias="0.5" />
+
 
     <ImageView
         android:id="@+id/middle_problem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
-        app:layout_constraintEnd_toEndOf="@+id/set_goals"
-        app:layout_constraintStart_toStartOf="@+id/set_goals"
-        app:layout_constraintTop_toTopOf="@+id/set_goals"
+        app:layout_constraintEnd_toEndOf="@+id/edit_goals"
+        app:layout_constraintStart_toStartOf="@+id/edit_goals"
+        app:layout_constraintTop_toTopOf="@+id/edit_goals"
         app:layout_constraintVertical_bias="0.643"
         app:srcCompat="@drawable/middle_container" />
 
@@ -167,42 +175,26 @@
         app:layout_constraintTop_toTopOf="@+id/middle_problem"
         app:layout_constraintVertical_bias="0.5" />
 
-    <TextView
-        android:id="@+id/problem_select"
+    <Spinner
+        android:id="@+id/prob_choice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="#2559"
-        android:textColor="@color/main_ui_color"
-        android:textSize="20sp"
-
-        app:layout_constraintBottom_toBottomOf="@+id/middle_problem"
-        app:layout_constraintEnd_toEndOf="@+id/middle_problem"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="@+id/middle_problem"
-        app:layout_constraintTop_toTopOf="@+id/middle_problem"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <ImageButton
-        android:id="@+id/problem_arrow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="@+id/middle_problem"
         app:layout_constraintEnd_toEndOf="@+id/middle_problem"
         app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="@+id/middle_problem"
         app:layout_constraintTop_toTopOf="@+id/middle_problem"
-        app:layout_constraintVertical_bias="0.45"
-        app:srcCompat="@drawable/arrow_right" />
+        app:layout_constraintVertical_bias="0.5" />
+
 
     <ImageView
         android:id="@+id/middle_memo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
-        app:layout_constraintEnd_toEndOf="@+id/set_goals"
-        app:layout_constraintStart_toStartOf="@+id/set_goals"
-        app:layout_constraintTop_toTopOf="@+id/set_goals"
+        app:layout_constraintEnd_toEndOf="@+id/edit_goals"
+        app:layout_constraintStart_toStartOf="@+id/edit_goals"
+        app:layout_constraintTop_toTopOf="@+id/edit_goals"
         app:layout_constraintVertical_bias="0.778"
         app:srcCompat="@drawable/middle_container" />
 
@@ -223,8 +215,8 @@
 
     <ImageButton
         android:id="@+id/memo_arrow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="25dp"
+        android:layout_height="24dp"
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="@+id/middle_memo"
         app:layout_constraintEnd_toEndOf="@+id/middle_memo"
@@ -240,10 +232,10 @@
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
-        app:layout_constraintEnd_toEndOf="@+id/set_goals"
+        app:layout_constraintEnd_toEndOf="@+id/edit_goals"
         app:layout_constraintHorizontal_bias="0.853"
-        app:layout_constraintStart_toStartOf="@+id/set_goals"
-        app:layout_constraintTop_toTopOf="@+id/set_goals"
+        app:layout_constraintStart_toStartOf="@+id/edit_goals"
+        app:layout_constraintTop_toTopOf="@+id/edit_goals"
         app:layout_constraintVertical_bias="0.91"
         app:srcCompat="@drawable/bottom_container_half" />
 
@@ -268,10 +260,10 @@
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
-        app:layout_constraintEnd_toEndOf="@+id/set_goals"
+        app:layout_constraintEnd_toEndOf="@+id/edit_goals"
         app:layout_constraintHorizontal_bias="0.146"
-        app:layout_constraintStart_toStartOf="@+id/set_goals"
-        app:layout_constraintTop_toTopOf="@+id/set_goals"
+        app:layout_constraintStart_toStartOf="@+id/edit_goals"
+        app:layout_constraintTop_toTopOf="@+id/edit_goals"
         app:layout_constraintVertical_bias="0.91"
         app:srcCompat="@drawable/bottom_container_half_colored" />
 

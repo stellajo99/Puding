@@ -131,7 +131,7 @@
         android:id="@+id/num_problems"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1"
+        android:text="2"
         android:textColor="@color/main_ui_color"
         android:textSize="22sp"
         android:textStyle="bold"
@@ -193,6 +193,60 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/problem_num_container"
         app:layout_constraintTop_toTopOf="@+id/problem_num_container"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageButton
+        android:id="@+id/middle_container_colored2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="@+id/set_goals"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="@+id/set_goals"
+        app:layout_constraintTop_toTopOf="@+id/set_goals"
+        app:layout_constraintVertical_bias="0.68"
+        app:srcCompat="@drawable/middle_container_colored" />
+
+    <TextView
+        android:id="@+id/time2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11 : 00"
+        android:textColor="@color/main_ui_color"
+        android:textSize="25sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/middle_container_colored2"
+        app:layout_constraintEnd_toEndOf="@+id/middle_container_colored2"
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toStartOf="@+id/middle_container_colored2"
+        app:layout_constraintTop_toTopOf="@+id/middle_container_colored2"
+        app:layout_constraintVertical_bias="0.425" />
+
+    <ImageView
+        android:id="@+id/problem_num_container2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/middle_container_colored2"
+        app:layout_constraintEnd_toEndOf="@+id/middle_container_colored2"
+        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintStart_toStartOf="@+id/middle_container_colored2"
+        app:layout_constraintTop_toTopOf="@+id/middle_container_colored2"
+        app:layout_constraintVertical_bias="0.485"
+        app:srcCompat="@drawable/problem_num_container" />
+
+    <TextView
+        android:id="@+id/main_problem_num2"
+        android:layout_width="50dp"
+        android:layout_height="18dp"
+        android:text="#2560"
+        android:textColor="@color/bg_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/problem_num_container2"
+        app:layout_constraintEnd_toEndOf="@+id/problem_num_container2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/problem_num_container2"
+        app:layout_constraintTop_toTopOf="@+id/problem_num_container2"
         app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,11 +13,13 @@
         <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/drawable/rectangle_6.xml" value="0.2075" />
         <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/drawable/setgoal_icon_container1.xml" value="0.2065" />
         <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/drawable/tab.xml" value="0.239" />
-        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/activity_add_goals.xml" value="0.536" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/activity_add_goals.xml" value="0.4" />
         <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/activity_edit_goals.xml" value="0.4" />
-        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/activity_goals_added.xml" value="0.4" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/activity_goals_added.xml" value="0.536" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/activity_goals_edited.xml" value="0.536" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/activity_goals_editted.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/activity_main.xml" value="0.136" />
-        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/activity_set_goals.xml" value="0.6" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/activity_set_goals.xml" value="0.4" />
         <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/edit_goals.xml" value="0.536" />
         <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/fragment_home.xml" value="0.23385416666666667" />
         <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/fragment_shop.xml" value="0.23385416666666667" />
@@ -36,11 +38,11 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/menu_selector_color.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.46157977404191963" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.661770508905201" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.3120471014492754" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19300911854103345" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.19300911854103345" />
-        <entry key="app/src/main/res/layout/fragment_shop.xml" value="0.5460561472219188" />
+        <entry key="app/src/main/res/layout/fragment_shop.xml" value="0.1330401075770022" />
         <entry key="app/src/main/res/layout/fragment_user.xml" value="0.20885416666666667" />
         <entry key="app/src/main/res/layout/fragment_work.xml" value="0.20885416666666667" />
         <entry key="app/src/main/res/layout/intro.xml" value="0.16364494379419486" />

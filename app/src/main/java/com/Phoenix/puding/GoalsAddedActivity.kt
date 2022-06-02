@@ -19,7 +19,7 @@ class GoalsAddedActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_goals_added)
 
-        timeBtn = findViewById(R.id.middle_container_colored2)
+        timeBtn = findViewById(R.id.middle_container_colored3)
 
         timeBtn.setOnClickListener(View.OnClickListener {
             val intent =
