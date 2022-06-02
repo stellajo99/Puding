@@ -10,7 +10,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.Phoenix.puding.R
-import com.Phoenix.puding.SetGoalsActivity
 import com.Phoenix.puding.databinding.FragmentWorkBinding
 
 
