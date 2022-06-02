@@ -2,6 +2,7 @@ package com.Phoenix.puding
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Spinner
@@ -10,11 +11,17 @@ import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.Phoenix.puding.databinding.ActivityAddGoalsBinding
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupWithNavController
+import com.Phoenix.puding.databinding.ActivityMainBinding
+import com.Phoenix.puding.ui.home.HomeFragment
+import com.Phoenix.puding.ui.work.WorkFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_add_goals.*
 
-
-
 class AddGoalsActivity : AppCompatActivity() {
+    lateinit var bottomNavigationView : BottomNavigationView
     lateinit var enterBtn : ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +42,8 @@ class AddGoalsActivity : AppCompatActivity() {
             startActivity(intent)
         })
 
-
+        bottomNavigationView = findViewById(R.id.nav_view)
+        bottomNavigationView.selectedItemId = R.id.navigation_work
     }
 
     private fun setupSpinnerHour() {
@@ -112,5 +120,11 @@ class AddGoalsActivity : AppCompatActivity() {
 
     fun backbtn(view: View){
         finish()
+    }
+
+    fun replaceFragment(fragment: Fragment){
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.nav_host_fragment_activity_main,fragment).commit()
     }
 }
