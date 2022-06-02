@@ -7,18 +7,88 @@
     android:background="@color/bg_color"
     tools:context=".ui.work.WorkFragment">
 
-    <TextView
-        android:id="@+id/text_work"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+
+    <View
+        android:id="@+id/biggest_container"
+        android:layout_width="wrap_content"
+        android:layout_height="238dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/popup"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8"/>
+        app:layout_constraintVertical_bias="0.925" />
+
+    <View
+        android:id="@+id/rectangle_1"
+        android:layout_width="123dp"
+        android:layout_height="123dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="44dp"
+        android:background="@drawable/setgoal_icon_container1"
+        app:layout_constraintBottom_toBottomOf="@+id/biggest_container"
+        app:layout_constraintStart_toStartOf="@+id/biggest_container"
+        app:layout_constraintTop_toTopOf="@+id/biggest_container"
+        app:layout_constraintVertical_bias="0.556" />
+
+    <View
+        android:id="@+id/rectangle_2"
+        android:layout_width="123dp"
+        android:layout_height="123dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/setgoal_icon_container1"
+        app:layout_constraintBottom_toBottomOf="@+id/biggest_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintStart_toStartOf="@+id/biggest_container"
+        app:layout_constraintTop_toTopOf="@+id/biggest_container"
+        app:layout_constraintVertical_bias="0.556" />
+
+    <ImageView
+        android:id="@+id/down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/biggest_container"
+        app:layout_constraintEnd_toEndOf="@+id/biggest_container"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/biggest_container"
+        app:layout_constraintVertical_bias="0.106"
+        app:srcCompat="@drawable/arrow_bottom" />
+
+    <ImageButton
+        android:id="@+id/add_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_1"
+        app:layout_constraintVertical_bias="0.507"
+        app:srcCompat="@drawable/add_note" />
+
+    <ImageButton
+        android:id="@+id/todo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_2"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_2"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_2"
+        app:layout_constraintVertical_bias="0.507"
+        app:srcCompat="@drawable/todo" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -30,7 +30,7 @@ class UserFragment : Fragment() {
 
         val textView: TextView = binding.textUser
         userViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+
         }
         return root
     }
