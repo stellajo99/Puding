@@ -34,6 +34,8 @@ class SetGoalsActivity : AppCompatActivity() {
         })
 
         bottomNavigationView = findViewById(R.id.nav_view)
+        bottomNavigationView.selectedItemId = R.id.navigation_work
+
         bottomNavigationView.setOnItemSelectedListener { item->
             when (item.itemId) {
                 R.id.navigation_home -> {

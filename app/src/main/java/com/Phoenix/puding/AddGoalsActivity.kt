@@ -20,9 +20,8 @@ import com.Phoenix.puding.ui.work.WorkFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_add_goals.*
 
-
-
 class AddGoalsActivity : AppCompatActivity() {
+    lateinit var bottomNavigationView : BottomNavigationView
     lateinit var enterBtn : ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,7 +42,8 @@ class AddGoalsActivity : AppCompatActivity() {
             startActivity(intent)
         })
 
-
+        bottomNavigationView = findViewById(R.id.nav_view)
+        bottomNavigationView.selectedItemId = R.id.navigation_work
     }
 
     private fun setupSpinnerHour() {
