@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditGoalsActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:background="@color/main_ui_color"
+        app:itemIconTint="@drawable/menu_selector_color"
+        app:itemTextColor="@drawable/menu_selector_color"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_goals"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edit_goals"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <fragment
+        android:id="@+id/edit_goals"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/mobile_navigation"
+        tools:layout_editor_absoluteX="-164dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="backbtn"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="@+id/edit_goals"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toStartOf="@+id/edit_goals"
+        app:layout_constraintTop_toTopOf="@+id/edit_goals"
+        app:layout_constraintVertical_bias="0.112"
+        app:srcCompat="@drawable/arrow_left" />
+
+    <TextView
+        android:id="@+id/setgoalstext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EDIT GOALS"
+        android:textColor="@color/main_ui_color"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/edit_goals"
+        app:layout_constraintTop_toTopOf="@+id/edit_goals"
+        app:layout_constraintVertical_bias="0.183" />
+
+
+    <ImageButton
+        android:id="@+id/top_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="@+id/edit_goals"
+        app:layout_constraintStart_toStartOf="@+id/edit_goals"
+        app:layout_constraintTop_toTopOf="@+id/edit_goals"
+        app:layout_constraintVertical_bias="0.33"
+        app:srcCompat="@drawable/top_container" />
+
+    <Spinner
+        android:id="@+id/hour_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/top_container"
+        app:layout_constraintEnd_toEndOf="@+id/top_container"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="@+id/top_container"
+        app:layout_constraintTop_toTopOf="@+id/top_container"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=":"
+        android:textColor="@color/main_ui_color"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/top_container"
+        app:layout_constraintEnd_toEndOf="@+id/top_container"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/top_container"
+        app:layout_constraintTop_toTopOf="@+id/top_container"
+        app:layout_constraintVertical_bias="0.5" />
+
+
+
+    <Spinner
+        android:id="@+id/minute_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/top_container"
+        app:layout_constraintEnd_toEndOf="@+id/top_container"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="@+id/top_container"
+        app:layout_constraintTop_toTopOf="@+id/top_container"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/middle_repeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="@+id/edit_goals"
+        app:layout_constraintStart_toStartOf="@+id/edit_goals"
+        app:layout_constraintTop_toTopOf="@+id/edit_goals"
+        app:layout_constraintVertical_bias="0.513"
+        app:srcCompat="@drawable/middle_container" />
+
+    <TextView
+        android:id="@+id/repeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repeat"
+        android:textColor="@color/main_ui_color"
+        android:textSize="20sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/middle_repeat"
+        app:layout_constraintEnd_toEndOf="@+id/middle_repeat"
+        app:layout_constraintHorizontal_bias="0.201"
+        app:layout_constraintStart_toStartOf="@+id/middle_repeat"
+        app:layout_constraintTop_toTopOf="@+id/middle_repeat"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Spinner
+        android:id="@+id/repeat_choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/middle_repeat"
+        app:layout_constraintEnd_toEndOf="@+id/middle_repeat"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="@+id/middle_repeat"
+        app:layout_constraintTop_toTopOf="@+id/middle_repeat"
+        app:layout_constraintVertical_bias="0.5" />
+
+
+    <ImageView
+        android:id="@+id/middle_problem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="@+id/edit_goals"
+        app:layout_constraintStart_toStartOf="@+id/edit_goals"
+        app:layout_constraintTop_toTopOf="@+id/edit_goals"
+        app:layout_constraintVertical_bias="0.643"
+        app:srcCompat="@drawable/middle_container" />
+
+    <TextView
+        android:id="@+id/problem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Problem"
+        android:textColor="@color/main_ui_color"
+        android:textSize="20sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/middle_problem"
+        app:layout_constraintEnd_toEndOf="@+id/middle_problem"
+        app:layout_constraintHorizontal_bias="0.201"
+        app:layout_constraintStart_toStartOf="@+id/middle_problem"
+        app:layout_constraintTop_toTopOf="@+id/middle_problem"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Spinner
+        android:id="@+id/prob_choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/middle_problem"
+        app:layout_constraintEnd_toEndOf="@+id/middle_problem"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="@+id/middle_problem"
+        app:layout_constraintTop_toTopOf="@+id/middle_problem"
+        app:layout_constraintVertical_bias="0.5" />
+
+
+    <ImageView
+        android:id="@+id/middle_memo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="@+id/edit_goals"
+        app:layout_constraintStart_toStartOf="@+id/edit_goals"
+        app:layout_constraintTop_toTopOf="@+id/edit_goals"
+        app:layout_constraintVertical_bias="0.778"
+        app:srcCompat="@drawable/middle_container" />
+
+    <TextView
+        android:id="@+id/memo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Memo"
+        android:textColor="@color/main_ui_color"
+        android:textSize="20sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/middle_memo"
+        app:layout_constraintEnd_toEndOf="@+id/middle_memo"
+        app:layout_constraintHorizontal_bias="0.201"
+        app:layout_constraintStart_toStartOf="@+id/middle_memo"
+        app:layout_constraintTop_toTopOf="@+id/middle_memo"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageButton
+        android:id="@+id/memo_arrow"
+        android:layout_width="25dp"
+        android:layout_height="24dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/middle_memo"
+        app:layout_constraintEnd_toEndOf="@+id/middle_memo"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="@+id/middle_memo"
+        app:layout_constraintTop_toTopOf="@+id/middle_memo"
+        app:layout_constraintVertical_bias="0.45"
+        app:srcCompat="@drawable/arrow_right" />
+
+    <ImageButton
+        android:id="@+id/enter_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="@+id/edit_goals"
+        app:layout_constraintHorizontal_bias="0.853"
+        app:layout_constraintStart_toStartOf="@+id/edit_goals"
+        app:layout_constraintTop_toTopOf="@+id/edit_goals"
+        app:layout_constraintVertical_bias="0.91"
+        app:srcCompat="@drawable/bottom_container_half" />
+
+    <TextView
+        android:id="@+id/enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ENTER"
+        android:textColor="@color/main_ui_color"
+        android:textSize="20sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/enter_container"
+        app:layout_constraintEnd_toEndOf="@+id/enter_container"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/enter_container"
+        app:layout_constraintTop_toTopOf="@+id/enter_container"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageButton
+        android:id="@+id/delete_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="@+id/edit_goals"
+        app:layout_constraintHorizontal_bias="0.146"
+        app:layout_constraintStart_toStartOf="@+id/edit_goals"
+        app:layout_constraintTop_toTopOf="@+id/edit_goals"
+        app:layout_constraintVertical_bias="0.91"
+        app:srcCompat="@drawable/bottom_container_half_colored" />
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DELETE"
+        android:textColor="@color/main_ui_color"
+        android:textSize="20sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/delete_container"
+        app:layout_constraintEnd_toEndOf="@+id/delete_container"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/delete_container"
+        app:layout_constraintTop_toTopOf="@+id/delete_container"
+        app:layout_constraintVertical_bias="0.5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

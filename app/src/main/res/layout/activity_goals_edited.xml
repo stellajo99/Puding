@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GoalsEditedActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:background="@color/main_ui_color"
+        app:itemIconTint="@drawable/menu_selector_color"
+        app:itemTextColor="@drawable/menu_selector_color"
+        app:layout_constraintBottom_toBottomOf="@+id/set_goals"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/set_goals"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <fragment
+        android:id="@+id/set_goals"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/mobile_navigation"
+        tools:layout_editor_absoluteX="-164dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="19dp"
+        android:layout_height="27dp"
+        android:onClick="backbtn"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="@+id/set_goals"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toStartOf="@+id/set_goals"
+        app:layout_constraintTop_toTopOf="@+id/set_goals"
+        app:layout_constraintVertical_bias="0.112"
+        app:srcCompat="@drawable/arrow_left" />
+
+    <TextView
+        android:id="@+id/setgoalstext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SET GOALS"
+        android:textColor="@color/main_ui_color"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/set_goals"
+        app:layout_constraintTop_toTopOf="@+id/set_goals"
+        app:layout_constraintVertical_bias="0.183" />
+
+    <ImageButton
+        android:id="@+id/addgoals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintStart_toStartOf="@+id/set_goals"
+        app:layout_constraintTop_toTopOf="@+id/set_goals"
+        app:layout_constraintVertical_bias="0.182"
+        app:srcCompat="@drawable/add" />
+
+    <ImageView
+        android:id="@+id/top_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="@+id/set_goals"
+        app:layout_constraintStart_toStartOf="@+id/set_goals"
+        app:layout_constraintTop_toTopOf="@+id/set_goals"
+        app:layout_constraintVertical_bias="0.318"
+        app:srcCompat="@drawable/top_container" />
+
+    <ImageView
+        android:id="@+id/report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="@+id/top_container"
+        app:layout_constraintEnd_toEndOf="@+id/top_container"
+        app:layout_constraintHorizontal_bias="0.288"
+        app:layout_constraintStart_toStartOf="@+id/top_container"
+        app:layout_constraintTop_toTopOf="@+id/top_container"
+        app:layout_constraintVertical_bias="0.3"
+        app:srcCompat="@drawable/report" />
+
+    <TextView
+        android:id="@+id/datetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2022-06-01"
+        android:textColor="@color/main_ui_color"
+        android:textSize="20sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/top_container"
+        app:layout_constraintEnd_toEndOf="@+id/top_container"
+        app:layout_constraintHorizontal_bias="0.653"
+        app:layout_constraintStart_toStartOf="@+id/top_container"
+        app:layout_constraintTop_toTopOf="@+id/top_container"
+        app:layout_constraintVertical_bias="0.296" />
+
+    <TextView
+        android:id="@+id/problemsleft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="problems left"
+        android:textColor="@color/main_ui_color"
+        android:textSize="20sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/top_container"
+        app:layout_constraintEnd_toEndOf="@+id/top_container"
+        app:layout_constraintHorizontal_bias="0.683"
+        app:layout_constraintStart_toStartOf="@+id/top_container"
+        app:layout_constraintTop_toTopOf="@+id/top_container"
+        app:layout_constraintVertical_bias="0.728" />
+
+    <TextView
+        android:id="@+id/num_problems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textColor="@color/main_ui_color"
+        android:textSize="22sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="@+id/top_container"
+        app:layout_constraintEnd_toEndOf="@+id/top_container"
+        app:layout_constraintHorizontal_bias="0.289"
+        app:layout_constraintStart_toStartOf="@+id/top_container"
+        app:layout_constraintTop_toTopOf="@+id/top_container"
+        app:layout_constraintVertical_bias="0.746" />
+
+    <ImageView
+        android:id="@+id/middle_container_colored1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="@+id/set_goals"
+        app:layout_constraintStart_toStartOf="@+id/set_goals"
+        app:layout_constraintTop_toTopOf="@+id/set_goals"
+        app:layout_constraintVertical_bias="0.525"
+        app:srcCompat="@drawable/middle_container_colored" />
+
+    <TextView
+        android:id="@+id/time1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 : 00"
+        android:textColor="@color/main_ui_color"
+        android:textSize="25sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/middle_container_colored1"
+        app:layout_constraintEnd_toEndOf="@+id/middle_container_colored1"
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toStartOf="@+id/middle_container_colored1"
+        app:layout_constraintTop_toTopOf="@+id/middle_container_colored1"
+        app:layout_constraintVertical_bias="0.425" />
+
+    <ImageView
+        android:id="@+id/problem_num_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/middle_container_colored1"
+        app:layout_constraintEnd_toEndOf="@+id/middle_container_colored1"
+        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintStart_toStartOf="@+id/middle_container_colored1"
+        app:layout_constraintTop_toTopOf="@+id/middle_container_colored1"
+        app:layout_constraintVertical_bias="0.485"
+        app:srcCompat="@drawable/problem_num_container" />
+
+    <TextView
+        android:id="@+id/main_problem_num"
+        android:layout_width="50dp"
+        android:layout_height="18dp"
+        android:text="#2559"
+        android:textColor="@color/bg_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/problem_num_container"
+        app:layout_constraintEnd_toEndOf="@+id/problem_num_container"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/problem_num_container"
+        app:layout_constraintTop_toTopOf="@+id/problem_num_container"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageButton
+        android:id="@+id/middle_container_colored2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="@+id/set_goals"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="@+id/set_goals"
+        app:layout_constraintTop_toTopOf="@+id/set_goals"
+        app:layout_constraintVertical_bias="0.68"
+        app:srcCompat="@drawable/middle_container_colored" />
+
+    <TextView
+        android:id="@+id/time2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11 : 00"
+        android:textColor="@color/main_ui_color"
+        android:textSize="25sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/middle_container_colored2"
+        app:layout_constraintEnd_toEndOf="@+id/middle_container_colored2"
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toStartOf="@+id/middle_container_colored2"
+        app:layout_constraintTop_toTopOf="@+id/middle_container_colored2"
+        app:layout_constraintVertical_bias="0.425" />
+
+    <ImageView
+        android:id="@+id/problem_num_container2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/middle_container_colored2"
+        app:layout_constraintEnd_toEndOf="@+id/middle_container_colored2"
+        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintStart_toStartOf="@+id/middle_container_colored2"
+        app:layout_constraintTop_toTopOf="@+id/middle_container_colored2"
+        app:layout_constraintVertical_bias="0.485"
+        app:srcCompat="@drawable/problem_num_container" />
+
+    <TextView
+        android:id="@+id/main_problem_num2"
+        android:layout_width="50dp"
+        android:layout_height="18dp"
+        android:text="#2560"
+        android:textColor="@color/bg_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/problem_num_container2"
+        app:layout_constraintEnd_toEndOf="@+id/problem_num_container2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/problem_num_container2"
+        app:layout_constraintTop_toTopOf="@+id/problem_num_container2"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageButton
+        android:id="@+id/middle_container_colored3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="@+id/set_goals"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="@+id/set_goals"
+        app:layout_constraintTop_toTopOf="@+id/set_goals"
+        app:layout_constraintVertical_bias="0.843"
+        app:srcCompat="@drawable/middle_container_colored" />
+
+    <TextView
+        android:id="@+id/time3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="13 : 00"
+        android:textColor="@color/main_ui_color"
+        android:textSize="25sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/middle_container_colored3"
+        app:layout_constraintEnd_toEndOf="@+id/middle_container_colored3"
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toStartOf="@+id/middle_container_colored3"
+        app:layout_constraintTop_toTopOf="@+id/middle_container_colored3"
+        app:layout_constraintVertical_bias="0.425" />
+
+    <ImageButton
+        android:id="@+id/problem_num_container3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/middle_container_colored3"
+        app:layout_constraintEnd_toEndOf="@+id/middle_container_colored3"
+        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintStart_toStartOf="@+id/middle_container_colored3"
+        app:layout_constraintTop_toTopOf="@+id/middle_container_colored3"
+        app:layout_constraintVertical_bias="0.485"
+        app:srcCompat="@drawable/problem_num_container" />
+
+    <TextView
+        android:id="@+id/main_problem_num3"
+        android:layout_width="50dp"
+        android:layout_height="18dp"
+        android:text="#2561"
+        android:textColor="@color/bg_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/problem_num_container3"
+        app:layout_constraintEnd_toEndOf="@+id/problem_num_container3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/problem_num_container3"
+        app:layout_constraintTop_toTopOf="@+id/problem_num_container3"
+        app:layout_constraintVertical_bias="0.5" />
+</androidx.constraintlayout.widget.ConstraintLayout>
