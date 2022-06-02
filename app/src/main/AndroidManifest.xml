@@ -23,7 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SetGoalsActivity" />
+        <activity android:name=".AddGoalsActivity" />
+        <activity android:name=".GoalsAddedActivity" />
+        <activity android:name=".EditGoalsActivity" />
     </application>
 
 </manifest>

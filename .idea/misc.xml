@@ -3,6 +3,32 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.24" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/drawable/addgoals.xml" value="0.2075" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.24" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.24" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/drawable/ic_launcher_background.xml" value="0.24" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.24" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/drawable/menu_selector_color.xml" value="0.24" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/drawable/rectangle_6.xml" value="0.2075" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/drawable/setgoal_icon_container1.xml" value="0.2065" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/drawable/tab.xml" value="0.239" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/activity_add_goals.xml" value="0.536" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/activity_edit_goals.xml" value="0.4" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/activity_goals_added.xml" value="0.4" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/activity_main.xml" value="0.136" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/activity_set_goals.xml" value="0.6" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/edit_goals.xml" value="0.536" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/fragment_home.xml" value="0.23385416666666667" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/fragment_shop.xml" value="0.23385416666666667" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/fragment_user.xml" value="0.23385416666666667" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/fragment_work.xml" value="0.264" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/intro.xml" value="0.23385416666666667" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/main_select_task.xml" value="0.6" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/set_goals.xml" value="0.152" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/set_goals_add.xml" value="0.536" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/layout/spinner_item.xml" value="0.21693840579710144" />
+        <entry key="..\:/Users/stell/AndroidStudioProjects/app/src/main/res/menu/bottom_nav_menu.xml" value="0.16" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bar_selector_color.xml" value="0.1835" />
         <entry key="app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1" />
