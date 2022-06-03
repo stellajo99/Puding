@@ -50,31 +50,43 @@ class ProblemActivity: AppCompatActivity() {
         DateCont = findViewById(R.id.date_container)
 
         probTime1.setOnClickListener {
-            var intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.acmicpc.net/problem/2559"))
+            var intent = Intent(this, ConfActivity::class.java)
+            intent.putExtra("problem_number", "2559")
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
         }
         probNum1.setOnClickListener {
-            var intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.acmicpc.net/problem/2559"))
+            var intent = Intent(this, ConfActivity::class.java)
+            intent.putExtra("problem_number", "2559")
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
         }
         probTime2.setOnClickListener {
-            var intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.acmicpc.net/problem/2560"))
+            var intent = Intent(this, ConfActivity::class.java)
+            intent.putExtra("problem_number", "2560")
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
         }
         probNum2.setOnClickListener {
-            var intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.acmicpc.net/problem/2560"))
+            var intent = Intent(this, ConfActivity::class.java)
+            intent.putExtra("problem_number", "2560")
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
         }
         probTime3.setOnClickListener {
-            var intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.acmicpc.net/problem/2561"))
+            var intent = Intent(this, ConfActivity::class.java)
+            intent.putExtra("problem_number", "2561")
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
         }
         probNum3.setOnClickListener {
-            var intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.acmicpc.net/problem/2561"))
+            var intent = Intent(this, ConfActivity::class.java)
+            intent.putExtra("problem_number", "2561")
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
         }
         backBtn.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, ConfActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
         }

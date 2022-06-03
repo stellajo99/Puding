@@ -160,14 +160,14 @@
         android:layout_height="wrap_content"
         android:text="10 : 00"
         android:textColor="@color/main_ui_color"
-        android:textSize="25sp"
+        android:textSize="20sp"
 
         app:layout_constraintBottom_toBottomOf="@+id/middle_container_colored1"
         app:layout_constraintEnd_toEndOf="@+id/middle_container_colored1"
         app:layout_constraintHorizontal_bias="0.257"
         app:layout_constraintStart_toStartOf="@+id/middle_container_colored1"
         app:layout_constraintTop_toTopOf="@+id/middle_container_colored1"
-        app:layout_constraintVertical_bias="0.425" />
+        app:layout_constraintVertical_bias="0.5" />
 
     <ImageView
         android:id="@+id/problem_num_container"
@@ -214,14 +214,14 @@
         android:layout_height="wrap_content"
         android:text="11 : 00"
         android:textColor="@color/main_ui_color"
-        android:textSize="25sp"
+        android:textSize="20sp"
 
         app:layout_constraintBottom_toBottomOf="@+id/middle_container_colored2"
         app:layout_constraintEnd_toEndOf="@+id/middle_container_colored2"
         app:layout_constraintHorizontal_bias="0.257"
         app:layout_constraintStart_toStartOf="@+id/middle_container_colored2"
         app:layout_constraintTop_toTopOf="@+id/middle_container_colored2"
-        app:layout_constraintVertical_bias="0.425" />
+        app:layout_constraintVertical_bias="0.5" />
 
     <ImageView
         android:id="@+id/problem_num_container2"
@@ -268,14 +268,14 @@
         android:layout_height="wrap_content"
         android:text="12 : 00"
         android:textColor="@color/main_ui_color"
-        android:textSize="25sp"
+        android:textSize="20sp"
 
         app:layout_constraintBottom_toBottomOf="@+id/middle_container_colored3"
         app:layout_constraintEnd_toEndOf="@+id/middle_container_colored3"
         app:layout_constraintHorizontal_bias="0.257"
         app:layout_constraintStart_toStartOf="@+id/middle_container_colored3"
         app:layout_constraintTop_toTopOf="@+id/middle_container_colored3"
-        app:layout_constraintVertical_bias="0.425" />
+        app:layout_constraintVertical_bias="0.5" />
 
     <ImageButton
         android:id="@+id/problem_num_container3"

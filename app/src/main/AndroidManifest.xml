@@ -32,6 +32,7 @@
         <activity android:name=".GoalsAddedActivity" />
         <activity android:name=".EditGoalsActivity" />
         <activity android:name=".ui.todaysProblem.ProblemActivity" />
+        <activity android:name=".ui.todaysProblem.ConfActivity" />
     </application>
 
 </manifest>
