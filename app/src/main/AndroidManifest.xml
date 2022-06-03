@@ -35,4 +35,6 @@
         <activity android:name=".ui.todaysProblem.ConfActivity" />
     </application>
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 </manifest>
