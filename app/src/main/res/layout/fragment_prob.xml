@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context="com.Phoenix.puding.ui.todaysProblem.ProblemActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@color/main_ui_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@drawable/menu_selector_color"
+        app:itemTextColor="@drawable/menu_selector_color"/>
+
+    /* 뒤로가기 */
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/arrow"
+        android:layout_marginTop="76dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"/>
+
+    /* 타이틀 */
+    <TextView
+        android:id="@+id/text_Todays_Problem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TODAY's PROBLEM"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="134dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    /* 오늘 날짜와 남은 문제 수 */
+    <ImageView
+        android:id="@+id/date_container"
+        android:layout_width="296dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="190dp"
+        android:src="@drawable/date_container"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:drawableLeft="@drawable/flag"
+        android:drawablePadding="12dp"
+        android:text="2022 - 06 - 04"
+        android:textSize="18dp"
+        android:textColor="@color/main_ui_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="@id/date_container"
+        app:layout_constraintBottom_toBottomOf="@id/date_container"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:id="@+id/prob_left_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:paddingLeft="7dp"
+        android:text="3"
+        android:textSize="18dp"
+        android:textColor="@color/main_ui_color"
+        app:layout_constraintStart_toStartOf="@id/date"
+        app:layout_constraintEnd_toEndOf="@id/date_container"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toTopOf="@id/date_container"
+        app:layout_constraintBottom_toBottomOf="@id/date_container"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:id="@+id/prob_left_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginLeft="40dp"
+        android:text="problems left"
+        android:textSize="18dp"
+        android:textColor="@color/main_ui_color"
+        app:layout_constraintStart_toStartOf="@id/prob_left_num"
+        app:layout_constraintEnd_toEndOf="@id/date_container"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toTopOf="@id/date_container"
+        app:layout_constraintBottom_toBottomOf="@id/date_container"
+        app:layout_constraintVertical_bias="0" />
+
+    /* 알람 시간과 문제 번호 버튼 */
+    // 버튼 1
+    <ImageButton
+        android:id="@+id/problem_time1"
+        android:layout_width="296dp"
+        android:layout_height="68dp"
+        android:background="@drawable/prob_time_container"
+        android:gravity="center|left"
+        android:paddingLeft="31dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="@id/date_container"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="143dp" />
+
+    <TextView
+        android:id="@+id/problem_time1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 : 00"
+        android:textSize="20dp"
+        android:textColor="@color/main_ui_color"
+        app:layout_constraintBottom_toBottomOf="@+id/problem_time1"
+        app:layout_constraintEnd_toEndOf="@+id/problem_time1"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="@+id/problem_time1"
+        app:layout_constraintTop_toTopOf="@+id/problem_time1"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageButton
+        android:id="@+id/problem_num1"
+        android:layout_width="94dp"
+        android:layout_height="35dp"
+        android:layout_marginRight="26dp"
+        android:background="@drawable/prob_num_container"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/problem_time1"
+        app:layout_constraintEnd_toEndOf="@id/problem_time1"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@id/problem_time1"
+        app:layout_constraintTop_toTopOf="@id/problem_time1"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/problem_num1_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#2559"
+        android:textColor="@color/bg_color"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/problem_num1"
+        app:layout_constraintEnd_toEndOf="@+id/problem_num1"
+        app:layout_constraintStart_toStartOf="@+id/problem_num1"
+        app:layout_constraintTop_toTopOf="@+id/problem_num1" />
+
+    // 버튼 2
+    <ImageButton
+        android:id="@+id/problem_time2"
+        android:layout_width="296dp"
+        android:layout_height="68dp"
+        android:background="@drawable/prob_time_container"
+        android:gravity="center|left"
+        android:paddingLeft="31dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="@id/problem_time1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="90dp" />
+
+    <TextView
+        android:id="@+id/problem_time2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11 : 00"
+        android:textSize="20dp"
+        android:textColor="@color/main_ui_color"
+        app:layout_constraintBottom_toBottomOf="@+id/problem_time2"
+        app:layout_constraintEnd_toEndOf="@+id/problem_time2"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="@+id/problem_time2"
+        app:layout_constraintTop_toTopOf="@+id/problem_time2"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageButton
+        android:id="@+id/problem_num2"
+        android:layout_width="94dp"
+        android:layout_height="35dp"
+        android:layout_marginRight="26dp"
+        android:background="@drawable/prob_num_container"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/problem_time2"
+        app:layout_constraintEnd_toEndOf="@id/problem_time2"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@id/problem_time2"
+        app:layout_constraintTop_toTopOf="@id/problem_time2"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/problem_num2_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#2560"
+        android:textColor="@color/bg_color"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/problem_num2"
+        app:layout_constraintEnd_toEndOf="@+id/problem_num2"
+        app:layout_constraintStart_toStartOf="@+id/problem_num2"
+        app:layout_constraintTop_toTopOf="@+id/problem_num2" />
+
+    // 버튼 3
+    <ImageButton
+        android:id="@+id/problem_time3"
+        android:layout_width="296dp"
+        android:layout_height="68dp"
+        android:background="@drawable/prob_time_container"
+        android:gravity="center|left"
+        android:paddingLeft="31dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="@id/problem_time2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="90dp" />
+
+    <TextView
+        android:id="@+id/problem_time3_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="13 : 00"
+        android:textSize="20dp"
+        android:textColor="@color/main_ui_color"
+        app:layout_constraintBottom_toBottomOf="@+id/problem_time3"
+        app:layout_constraintEnd_toEndOf="@+id/problem_time3"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="@+id/problem_time3"
+        app:layout_constraintTop_toTopOf="@+id/problem_time3"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageButton
+        android:id="@+id/problem_num3"
+        android:layout_width="94dp"
+        android:layout_height="35dp"
+        android:layout_marginRight="26dp"
+        android:background="@drawable/prob_num_container"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/problem_time3"
+        app:layout_constraintEnd_toEndOf="@id/problem_time3"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@id/problem_time3"
+        app:layout_constraintTop_toTopOf="@id/problem_time3"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/problem_num3_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#2561"
+        android:textColor="@color/bg_color"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/problem_num3"
+        app:layout_constraintEnd_toEndOf="@+id/problem_num3"
+        app:layout_constraintStart_toStartOf="@+id/problem_num3"
+        app:layout_constraintTop_toTopOf="@+id/problem_num3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

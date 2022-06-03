@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context="com.Phoenix.puding.ui.todaysProblem.ConfActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@color/main_ui_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@drawable/menu_selector_color"
+        app:itemTextColor="@drawable/menu_selector_color"/>
+
+    /* 뒤로가기 */
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/arrow"
+        android:layout_marginTop="76dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"/>
+
+    /* 타이틀 */
+    <TextView
+        android:id="@+id/todays_problem_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TODAY's PROBLEM"
+        android:textColor="@color/main_ui_color"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginTop="134dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    /* 문제 이동 버튼 */
+    <ImageView
+        android:id="@+id/problem_name"
+        android:layout_width="296dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/prob_time_container"
+        android:gravity="center|left"
+        android:paddingLeft="39dp"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:id="@+id/todays_problem_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HELLO WORLD"
+        android:textAlignment="center"
+        android:textColor="@color/main_ui_color"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/problem_name"
+        app:layout_constraintEnd_toEndOf="@+id/problem_name"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="@+id/problem_name"
+        app:layout_constraintTop_toTopOf="@+id/problem_name"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageButton
+        android:id="@+id/problem_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="26dp"
+        android:background="@drawable/prob_num_container"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@id/problem_name"
+        app:layout_constraintEnd_toEndOf="@id/problem_name"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@id/problem_name"
+        app:layout_constraintTop_toTopOf="@id/problem_name"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/todays_problem_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#2559"
+        android:textAlignment="center"
+        android:textColor="@color/bg_color"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/problem_num"
+        app:layout_constraintEnd_toEndOf="@+id/problem_num"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/problem_num"
+        app:layout_constraintTop_toTopOf="@+id/problem_num"
+        app:layout_constraintVertical_bias="0.5" />
+
+    /* 인증 사진 업로드 버튼 */
+    <ImageButton
+        android:id="@+id/img_upload_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/screenshot_container"
+        android:drawablePadding="12dp"
+        android:gravity="center|top"
+        android:paddingTop="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/problem_name"
+        app:layout_constraintVertical_bias="0" />
+
+    <ImageButton
+        android:id="@+id/img_upload_button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/camera"
+        app:layout_constraintBottom_toBottomOf="@+id/img_upload_button"
+        app:layout_constraintEnd_toEndOf="@+id/img_upload_button"
+        app:layout_constraintStart_toStartOf="@+id/img_upload_button"
+        app:layout_constraintTop_toTopOf="@+id/img_upload_button"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/click_ment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CLICK TO UPLOAD SCREENSHOT"
+        android:textAlignment="center"
+        android:textColor="@color/main_ui_color"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_upload_button"
+        app:layout_constraintEnd_toEndOf="@+id/img_upload_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/img_upload_button"
+        app:layout_constraintTop_toTopOf="@+id/img_upload_button"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <ImageView
+        android:id="@+id/img_profile"
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_upload_button"
+        app:layout_constraintEnd_toEndOf="@+id/img_upload_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/img_upload_button"
+        app:layout_constraintTop_toTopOf="@id/img_upload_button"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/summit_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_upload_button"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <ImageView
+        android:id="@+id/coin_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.564"
+        app:srcCompat="@drawable/coin_popup" />
+
+    <ImageView
+        android:id="@+id/get_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/coin_popup"
+        app:layout_constraintEnd_toEndOf="@+id/coin_popup"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/coin_popup"
+        app:layout_constraintTop_toTopOf="@+id/coin_popup"
+        app:layout_constraintVertical_bias="1"
+        app:srcCompat="@drawable/get_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

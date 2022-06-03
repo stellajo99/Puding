@@ -31,6 +31,10 @@
         <activity android:name=".AddGoalsActivity" />
         <activity android:name=".GoalsAddedActivity" />
         <activity android:name=".EditGoalsActivity" />
+        <activity android:name=".ui.todaysProblem.ProblemActivity" />
+        <activity android:name=".ui.todaysProblem.ConfActivity" />
     </application>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 </manifest>

@@ -1,5 +1,7 @@
 package com.Phoenix.puding
 
+import android.content.SharedPreferences
+import android.content.pm.PackageManager
 import android.content.res.ColorStateList
 import android.graphics.BlendMode
 import android.graphics.BlendModeColorFilter
@@ -11,6 +13,7 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -18,20 +21,46 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.viewpager.widget.ViewPager
 import com.Phoenix.puding.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import org.w3c.dom.Text
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-
+    val MY_PERMISSION_ACCESS_ALL = 1001
     private lateinit var binding: ActivityMainBinding
     lateinit var hungryBar: ProgressBar
     lateinit var  funBar: ProgressBar
     lateinit var puppy: ImageView
+    lateinit var coin: TextView
+    lateinit var time: TextView
+    lateinit var num: TextView
+    lateinit var preferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        if(ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+            || ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+            var permissions = arrayOf(
+                android.Manifest.permission.READ_EXTERNAL_STORAGE
+            )
+            ActivityCompat.requestPermissions(this, permissions, MY_PERMISSION_ACCESS_ALL)
+        }
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        preferences = getSharedPreferences("information", MODE_PRIVATE)
+
+        coin = findViewById(R.id.coin)
+        coin.text = preferences.getString("coin", "100")
+
+        time = findViewById(R.id.main_time)
+        num = findViewById(R.id.main_problem_num)
+
+        if(preferences.getBoolean("done", false)){
+            time.text = "11: 00"
+            num.text = "#2560"
+        }
 
         val navView: BottomNavigationView = binding.navView
 
@@ -57,7 +86,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         var timer: Timer = Timer()
-        timer.schedule(timerTask, 0, 1000)
+        timer.schedule(timerTask, 0, 30000)
     }
 
     fun decreaseBar() {
