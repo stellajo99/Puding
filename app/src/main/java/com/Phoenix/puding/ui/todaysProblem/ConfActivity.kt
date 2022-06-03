@@ -26,6 +26,7 @@ import android.Manifest.permission.READ_EXTERNAL_STORAGE
 import android.app.Activity
 import android.content.Context
 import android.content.ContextWrapper
+import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -61,6 +62,12 @@ class ConfActivity: AppCompatActivity() {
 
     lateinit var bottomNavigationView : BottomNavigationView
 
+    lateinit var submitButton: ImageView
+    lateinit var coinPopup: ImageView
+    lateinit var getButton: ImageView
+
+    lateinit var preference: SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_conf)
@@ -76,6 +83,12 @@ class ConfActivity: AppCompatActivity() {
         information = findViewById(R.id.click_ment)
 
         uploadedImg = findViewById(R.id.img_profile)
+
+        submitButton = findViewById(R.id.submit_button)
+        coinPopup = findViewById(R.id.coin_popup)
+        getButton = findViewById(R.id.get_button)
+
+        preference = getSharedPreferences("information", MODE_PRIVATE)
 
         var intent = getIntent()
         problem_number = intent.getStringExtra("problem_number").toString()
@@ -102,6 +115,20 @@ class ConfActivity: AppCompatActivity() {
         backBtn.setOnClickListener{
             click_ment.visibility = View.VISIBLE
             val intent = Intent(this, ProblemActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+            startActivity(intent)
+        }
+
+        submitButton.setOnClickListener{
+            coinPopup.visibility = View.VISIBLE
+            getButton.visibility = View.VISIBLE
+        }
+
+        getButton.setOnClickListener{
+            preference.edit().putBoolean(problem_number, true).apply()
+            var coin = (Integer.parseInt(preference.getString("coin", "100")) + 50).toString()
+            preference.edit().putString("coin", coin).apply()
+            var intent = Intent(this, ProblemActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
         }

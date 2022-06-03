@@ -101,7 +101,7 @@
         android:id="@+id/datetext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2022-06-01"
+        android:text="2022-06-04"
         android:textColor="@color/main_ui_color"
         android:textSize="20sp"
 

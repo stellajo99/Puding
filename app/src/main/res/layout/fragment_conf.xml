@@ -181,4 +181,29 @@
         app:layout_constraintTop_toBottomOf="@+id/img_upload_button"
         app:layout_constraintVertical_bias="0.1" />
 
+    <ImageView
+        android:id="@+id/coin_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.564"
+        app:srcCompat="@drawable/coin_popup" />
+
+    <ImageView
+        android:id="@+id/get_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/coin_popup"
+        app:layout_constraintEnd_toEndOf="@+id/coin_popup"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/coin_popup"
+        app:layout_constraintTop_toTopOf="@+id/coin_popup"
+        app:layout_constraintVertical_bias="1"
+        app:srcCompat="@drawable/get_button" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

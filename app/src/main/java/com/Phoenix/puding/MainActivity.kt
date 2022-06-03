@@ -1,5 +1,6 @@
 package com.Phoenix.puding
 
+import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.content.res.ColorStateList
 import android.graphics.BlendMode
@@ -20,6 +21,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.viewpager.widget.ViewPager
 import com.Phoenix.puding.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import org.w3c.dom.Text
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -28,6 +30,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var hungryBar: ProgressBar
     lateinit var  funBar: ProgressBar
     lateinit var puppy: ImageView
+    lateinit var coin: TextView
+    lateinit var preferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +46,11 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        preferences = getSharedPreferences("information", MODE_PRIVATE)
+
+        coin = findViewById(R.id.coin)
+        coin.text = preferences.getString("coin", "100")
 
         val navView: BottomNavigationView = binding.navView
 
@@ -67,7 +76,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         var timer: Timer = Timer()
-        timer.schedule(timerTask, 0, 1000)
+        timer.schedule(timerTask, 0, 3000)
     }
 
     fun decreaseBar() {

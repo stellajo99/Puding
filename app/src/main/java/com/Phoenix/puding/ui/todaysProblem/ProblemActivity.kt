@@ -1,6 +1,7 @@
 package com.Phoenix.puding.ui.todaysProblem
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -29,10 +30,12 @@ class ProblemActivity: AppCompatActivity() {
     lateinit var DateCont: ImageView
 
     lateinit var bottomNavigationView : BottomNavigationView
+    lateinit var preference : SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_prob)
+        var myIntent = getIntent()
 
         backBtn = findViewById(R.id.back)
         probTime1 = findViewById(R.id.problem_time1)
@@ -48,6 +51,8 @@ class ProblemActivity: AppCompatActivity() {
         probLeftTxt = findViewById(R.id.prob_left_text)
 
         DateCont = findViewById(R.id.date_container)
+
+        preference = getSharedPreferences("information", MODE_PRIVATE)
 
         probTime1.setOnClickListener {
             var intent = Intent(this, ConfActivity::class.java)
@@ -89,6 +94,19 @@ class ProblemActivity: AppCompatActivity() {
             val intent = Intent(this, ConfActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
+        }
+
+        if(preference.getBoolean("2559", false)){
+            probTime1.setBackgroundResource(R.drawable.solved_problem)
+            probLeftNum.text = (Integer.parseInt(probLeftNum.text.toString()) - 1).toString()
+        }
+        if(preference.getBoolean("2560", false)){
+            probTime2.setBackgroundResource(R.drawable.solved_problem)
+            probLeftNum.text = (Integer.parseInt(probLeftNum.text.toString()) - 1).toString()
+        }
+        if(preference.getBoolean("2561", false)){
+            probTime3.setBackgroundResource(R.drawable.solved_problem)
+            probLeftNum.text = (Integer.parseInt(probLeftNum.text.toString()) - 1).toString()
         }
 
         bottomNavigationView = findViewById(R.id.nav_view)
