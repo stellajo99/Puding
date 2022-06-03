@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var  funBar: ProgressBar
     lateinit var puppy: ImageView
     lateinit var coin: TextView
+    lateinit var time: TextView
+    lateinit var num: TextView
     lateinit var preferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,6 +53,14 @@ class MainActivity : AppCompatActivity() {
 
         coin = findViewById(R.id.coin)
         coin.text = preferences.getString("coin", "100")
+
+        time = findViewById(R.id.main_time)
+        num = findViewById(R.id.main_problem_num)
+
+        if(preferences.getBoolean("done", false)){
+            time.text = "11: 00"
+            num.text = "#2560"
+        }
 
         val navView: BottomNavigationView = binding.navView
 
@@ -76,7 +86,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         var timer: Timer = Timer()
-        timer.schedule(timerTask, 0, 3000)
+        timer.schedule(timerTask, 0, 30000)
     }
 
     fun decreaseBar() {

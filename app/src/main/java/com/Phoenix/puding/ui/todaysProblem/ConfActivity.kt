@@ -124,10 +124,16 @@ class ConfActivity: AppCompatActivity() {
             getButton.visibility = View.VISIBLE
         }
 
+        preference.edit().putBoolean("2559", false).apply()
+        preference.edit().putBoolean("2560", false).apply()
+        preference.edit().putBoolean("2561", false).apply()
+        preference.edit().putString("coin", "100").apply()
+        preference.edit().putBoolean("done", false).apply()
         getButton.setOnClickListener{
             preference.edit().putBoolean(problem_number, true).apply()
             var coin = (Integer.parseInt(preference.getString("coin", "100")) + 50).toString()
             preference.edit().putString("coin", coin).apply()
+            preference.edit().putBoolean("done", true).apply()
             var intent = Intent(this, ProblemActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
