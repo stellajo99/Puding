@@ -21,11 +21,25 @@ The user can change frames or move to another page by clicking interactable area
 
 How to use Puding
 
+We developed the Puding using an Android studio.
+
+The Puding works fine at 850x360 resolution.
+We tested the Puding by using an AVD.
+
 There is a navigation bar at the bottom of the screen.
 The user can move to another page easily by clicking icons in the navigation bar.
+The first icon is 'HOME', second icon is 'WORK', third icon is 'SHOP', and fourth icon is 'USER'.
 
-If there is an arrow at the top right of the screen, the user can go to the previous screen by clicking the arrow.
+In the home, the user can check the status of the puppy.
+There are 2 stat bars which are 'hunger' and 'joy'.
+If all 2 stats are green color, the puppy will be happy.
+On the other hand, if all 2 stats are red color, the puppy will be sad.
 
-In the shop, the user can use scrolling to see more items.
+In the work, the user can add goals or check for coding problems.
+In setting goals page, the user can select a time, repeating time, and problem number.
+In today's problems page, the user can check for coding problems.
+When the user clicked the problem box, he can see the confirmation page.
 
-Most of the alarm setting steps are hard coded.
+In the shop, the user can buy items and make the puppy happy.
+There are 2 types in shop, food and toy.
+Food items can fill the hunger stat bar and toy items can fill the joy stat bar.
