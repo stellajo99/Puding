@@ -1,36 +1,74 @@
-2022-1 Human-Computer Interaction
+# PUDING: Your Coding Mate 🐶✨
 
-Team4 Phoenix: Minkyoung An, Seoyoung Jo, Juyie Hwang, Yuna Kim
+PUDING is a mobile app that motivates users to practice coding daily by guiding them through goal setting, solving problems, and submitting proof to earn rewards — all while keeping a virtual pet happy!
 
-# ReadMe
+---
+
+## 📌 Overview
+
+**PUDING** is a mobile coding companion that helps users build healthy coding habits in a fun, gamified way.  
+Users can set custom coding goals, solve daily problems, upload proof, and use earned coins to take care of their virtual puppy.  
+The app encourages consistency through simple goal tracking and an interactive pet that reacts to the user’s progress.
+
+---
+
+## 🔧 Key Features
+
+- **Goal Setting:** Create personal coding goals with custom time, repeat frequency, and problem details.
+- **Problem Solving:** Solve recommended coding problems and submit proof of completion with screenshots.
+- **Reward System:** Earn coins for solving problems and use them to keep a virtual pet happy, with dynamic status bars.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** Android (Java / Kotlin)
+- **Design:** Figma (High-fidelity prototyping)
+- **Backend / Logic:** Android Studio
+- **Gamification:** Virtual pet status system, reward store
+
+---
+
+## 📑 How It Works
+
+1. **Set Your Goals:**  
+   Add and manage daily coding tasks in the 'Work' tab — set the time, repetition, and problem details.
+
+2. **Solve Problems & Submit Proof:**  
+   Work on the recommended coding problems, then upload a screenshot as confirmation.  
+   Each problem has a unique ID and link for easy access.
+
+3. **Reward Your Pet:**  
+   Earn coins by solving problems and spend them on food or toys for your virtual puppy.  
+   The puppy’s happiness and hunger bars change dynamically based on your coding progress.
+
+---
+
+## 📸 Screenshots
+
+| Goal Setting | Problem Solving | Virtual Pet |
+|--------------|-----------------|--------------|
+| ![Goal](./images/Puding/puding4.png) | ![Problem](./images/Puding/puding6.png) | ![Pet](./images/Puding/puding2.png) |
 
 
-Puding: [prototype link](https://www.figma.com/proto/qzNBbGTJRzhtI2oh35uDzS/Puding---Phoenix?node-id=1220%3A837&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1220%3A837)
+---
 
+## 📘 What I Learned
 
-## How to use Figma<br>
-For this mid-fi prototype, we used Figma to prototype.<br>
-The Figma page emulates the Android(360x800) screen.<br>
-The computer mouse emulates the user’s finger.<br/><br/>
-Figma highlights interactable areas.<br>
-If the user clicks an area that cannot be interacted, the interactive area is displayed with a blue box.<br>
-The user can change frames or move to another page by clicking interactable areas.<br/>
+- Designed and developed an interactive Android app from wireframes to high-fidelity prototypes.
+- Practiced user-centered design principles to motivate daily coding through gamification.
+- Implemented goal-setting features and CRUD operations.
+- Built a reward system linking user activity to a dynamic virtual pet to boost engagement.
+- Collaborated effectively in a team, dividing tasks across goal management, problem management, and UI/UX design.
 
-## How to use Puding<br>
-We developed the Puding using an Android studio.<br/>
-The Puding works fine at 850x360 resolution.<br/>
-We tested the Puding by using an AVD.<br/><br/>
-There is a navigation bar at the bottom of the screen.<br>
-The user can move to another page easily by clicking icons in the navigation bar.<br>
-The first icon is 'HOME', second icon is 'WORK', third icon is 'SHOP', and fourth icon is 'USER'.<br/><br/>
-In the home, the user can check the status of the puppy.<br>
-There are 2 stat bars which are 'hunger' and 'joy'.<br>
-If all 2 stats are green color, the puppy will be happy.<br>
-On the other hand, if all 2 stats are red color, the puppy will be sad.<br/><br/>
-In the work, the user can add goals or check for coding problems.<br>
-In setting goals page, the user can select a time, repeating time, and problem number.<br>
-In today's problems page, the user can check for coding problems.<br>
-When the user clicked the problem box, he can see the confirmation page.<br/><br/>
-In the shop, the user can buy items and make the puppy happy.<br>
-There are 2 types in shop, food and toy.<br>
-Food items can fill the hunger stat bar and toy items can fill the joy stat bar.<br>
+---
+
+## 🔗 Links
+
+- [🎥 Presentation Video](https://youtu.be/a0442foi_AE)
+
+---
+
+## ✨ Credits
+
+Built by Team Phoenix for our final HCI project — combining gamification, user-centered design, and daily coding motivation into one mobile experience!
