@@ -22,7 +22,7 @@ The app encourages consistency through simple goal tracking and an interactive p
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** Android (Java / Kotlin)
+- **Frontend:** Android (Kotlin)
 - **Design:** Figma (High-fidelity prototyping)
 - **Backend / Logic:** Android Studio
 - **Gamification:** Virtual pet status system, reward store
